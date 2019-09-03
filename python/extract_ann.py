@@ -6,14 +6,6 @@ Created on Mon Jun 17 17:38:51 2019
 @author: makiya
 """
 
-
-# 5. Configure a new global `tensorflow` session
-from keras import backend as K
-session_conf = tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1)
-sess = tf.Session(graph=tf.get_default_graph(), config=session_conf)
-K.set_session(sess)
-
-
 import pandas as pd
 import ast
 
