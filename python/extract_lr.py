@@ -87,7 +87,7 @@ def filter_method(X_train,X_test):
 
 
 
-def feature_rand_forest(df_allrsui, X_train, X_test, h):
+def do_ml(df_allrsui, X_train, X_test, h):
     from sklearn.linear_model import LogisticRegression
     classifier = LogisticRegression(solver = 'liblinear',random_state=0)
     
@@ -164,20 +164,14 @@ def feature_rand_forest(df_allrsui, X_train, X_test, h):
     return f1_score_list, num_feature, feature_list, train_times, test_times
 
 
-           
-
-    
-
-
-
 df_allrsui = allfeatures_rsui()
 X_train, X_test, y_train, y_test= load_data()
 X_train, X_test = feature_scaling(X_train, X_test, y_train, y_test)
 X_train, X_test = filter_method(X_train,X_test)
-f1_score_one, num_one, one_features, train_time_one, test_time_one = feature_rand_forest(df_allrsui, X_train, X_test, 1)
+f1_score_one, num_one, one_features, train_time_one, test_time_one = do_ml(df_allrsui, X_train, X_test, 1)
 #f1_score_two, num_two, two_features, train_time_two, test_time_two = feature_rand_forest(df_allrsui, X_train, X_test, 2)
-f1_score_three, num_three, three_features, train_time_three, test_time_three = feature_rand_forest(df_allrsui, X_train, X_test, 3)
-f1_score_four, num_four, four_features, train_time_four, test_time_four = feature_rand_forest(df_allrsui, X_train, X_test, 4)
+f1_score_three, num_three, three_features, train_time_three, test_time_three = do_ml(df_allrsui, X_train, X_test, 3)
+f1_score_four, num_four, four_features, train_time_four, test_time_four = do_ml(df_allrsui, X_train, X_test, 4)
 
 #'num_two':num_two, 'two feature':two_features,'f1_score two':f1_score_two,
 df_iandu = pd.DataFrame({'num_one':num_one, 'one feature':one_features,'f1_score one':f1_score_one,'train-time-one':train_time_one,'test-time-one':test_time_one,
