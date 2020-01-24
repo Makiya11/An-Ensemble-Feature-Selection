@@ -21,14 +21,14 @@ UNSW NB15 https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-NB
 IDS2017 https://www.unb.ca/cic/datasets/ids-2017.html
  
 
-Ensemble Feature Selection:
+## Ensemble Feature Selection:
 
-Heuristic and Greedy methods
-Note:
+## Heuristic and Greedy methods
+**Note:**
 Categorical values(non-numerical values) and unnecessary(ex, ID) data have to be removed before using this method.
 In training and testing files, the last column has to be the label. If the last column is not the label, you need to fix it before implementing this program.
 
-Command
+**Command**
 python heur.py( or greedy.py) -tr TRAINING FILENAME -teTESTING FILENAME -m CLASSIFIER
  
 Command Example
@@ -70,13 +70,13 @@ optional arguments:
 
 
 
-Stopping Condition
+## Stopping Condition
 This method will find out the termination condition to stop the elimination of variables using feature selection’s cross-validation results 
 
-Note:
+**Note:**
 The feature selection has to be done before implementing stop.py.
 
-Command
+**Command**
 python stop.py -tr Training filename -teTesting filename -m classifier -f feature selection
 Command Example
 python stop.py -tr UNSW_NB15_training-set.csv -te UNSW_NB15_testing-set.csv -m RF -f Union
