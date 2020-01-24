@@ -3,7 +3,7 @@
 The deatail is in the PDF file above. 
 
 
-#Instruction Manual
+# Instruction Manual
  
 Technology requirements
 
