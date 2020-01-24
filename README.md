@@ -20,9 +20,6 @@ Download data:
 UNSW NB15 https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-NB15-Datasets/
 IDS2017 https://www.unb.ca/cic/datasets/ids-2017.html
  
-
-## Ensemble Feature Selection:
-
 ## Heuristic and Greedy methods
 **Note:**
 Categorical values(non-numerical values) and unnecessary(ex, ID) data have to be removed before using this method.
